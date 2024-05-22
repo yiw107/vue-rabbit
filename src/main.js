@@ -7,7 +7,8 @@ import router from './router'
 
 //引用初始化的样式文件
 import '@/styles/common.scss'
-import { useIntersectionObserver } from '@vueuse/core'
+//引入懒加载指令插件并且注册
+import {lazyPlugin} from '@/directives'
 
 
 //测试接口函数
@@ -22,18 +23,6 @@ app.use(router)
 
 app.mount('#app')
 
-//定义全局指令
-app.directive('img-lazy', {
-    mounted(el,binding) {
-        //el:指令把规定的那个元素
-        //binding：binding.value 指令等于号后面绑定的表达式的值 图片url
-        console.log(el,binding)
-        useIntersectionObserver(
-            el,
-            ([{ isIntersecting }]) => {
-                //进入视口区域
-              if(isIntersecting){el.src=binding.value}
-            },
-          )
-    },
-  })
+//注册插件
+app.use(lazyPlugin)
+

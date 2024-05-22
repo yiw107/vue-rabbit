@@ -6,10 +6,12 @@ import { onMounted, ref } from 'vue'
 const bannerlist = ref([])
 const getBanner = async()=>{
     const res = await getBannerAPI()
-    console .log('@@@',res)
     bannerlist.value = res.result
 }
 onMounted(()=>getBanner())
+
+
+
 </script>
 
 

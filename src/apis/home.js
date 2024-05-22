@@ -1,9 +1,14 @@
 import httpInstance from '@/utils/http'
 //获取轮播图数据
 
-export function getBannerAPI () {
+export function getBannerAPI (params = {}) {
+  //distributionSite默认为1商品为2
+  const {distributionSite='1'} = params
     return httpInstance({
-      url: '/home/banner'
+      url: '/home/banner',
+      params:{
+        distributionSite
+      }
     })
   }
 

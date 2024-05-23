@@ -7,7 +7,7 @@ import { onMounted, ref } from 'vue'
 const  newHotList =ref([])
 const getNewHotList =async()=>{
   const res = await getHotAPI()
-  console.log('人气推荐',res)
+  
   newHotList.value = res.result
 }
 onMounted(()=>getNewHotList())

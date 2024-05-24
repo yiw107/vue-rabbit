@@ -16,6 +16,10 @@ import { componentPlugin } from './components'
 // getCategory().then(res=>{
 //     console.log(res)
 // })
+// import {getDetailAPI} from '@/apis/detail'
+// getDetailAPI().then(res=>{
+//     console.log(res)
+// })
 const app = createApp(App)
 
 app.use(createPinia())

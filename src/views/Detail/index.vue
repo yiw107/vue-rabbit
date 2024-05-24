@@ -7,7 +7,9 @@ import DetailHot from './components/DetailHot.vue'
 const route = useRoute()
 const goods = ref({})
 const getGoods = async()=>{
+  console.log('goods',goods)
    const res = await getDetailAPI(route.params.id)
+   
    goods.value=res.result
 }
 onMounted(()=>getGoods())

@@ -1,0 +1,203 @@
+[33mcommit 44044ada105b93a6abc9e8763810f5ab65a8b468[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 22:19:20 2024 +0800
+
+    图片预览组件-props适配以及优化配件
+
+[33mcommit 67f76fd45530d5c01ef318c1593852da5c7d75df[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 21:49:34 2024 +0800
+
+    放大镜-实现大图显示以及优化
+
+[33mcommit df03f18aa48fa224f38785c5886d70b7f3e53ebb[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 20:48:52 2024 +0800
+
+    图片预览组件-小图切换大图显示
+
+[33mcommit 00af2774db36a461fc65d28c7be01f5fa40382e7[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 19:39:32 2024 +0800
+
+    详情热榜-title和列表内容的适配
+
+[33mcommit 33ca90fc7faa11f23d9b064c77b7e0270b706827[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 19:20:03 2024 +0800
+
+    详情热榜-基础组件封装和基础数据获取渲染
+
+[33mcommit 0aa5b67e1f264cd54015698afadb5446200f4800[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 17:14:49 2024 +0800
+
+    详情-基础数据渲染
+
+[33mcommit e3eece456734539b41f34b2c6fa89874d6eccba0[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 16:07:05 2024 +0800
+
+    详情-整体认识和路由配置
+
+[33mcommit c24fa3698de632baf97ee71ca65f037692f44ab9[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 15:18:44 2024 +0800
+
+    二级分类-路由滚动行为体验优化
+
+[33mcommit 0a88a5f2234de507b6f4604bf81786d0a3de6e2d[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 13:59:28 2024 +0800
+
+    二级分类-基础列表渲染
+
+[33mcommit 6ec78f3abefacee00317ceb4085f578e9eeb9254[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 10:48:34 2024 +0800
+
+    二级分类-面包屑导航实现
+
+[33mcommit bca214fcde3bf31794991039f280c38a7d9804a7[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Thu May 23 10:20:59 2024 +0800
+
+    二级分类-整体认识和路由配置
+
+[33mcommit b8fca5d069390784d17a442701f7fc0b5c71971c[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 22:21:30 2024 +0800
+
+    一级分类-按照业务逻辑拆分ha函数
+
+[33mcommit f92029bbc32c2f262d9a1a39a4d9462bd4019c9f[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 22:02:43 2024 +0800
+
+    一级分类-路由缓存问题解决
+
+[33mcommit d7a0aa2a3b7a88643afe640e9b3b55f9bcbae9db[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 21:35:15 2024 +0800
+
+    一级分类激活状态显示和分类列表渲染
+
+[33mcommit f97b9552572fae6e793d4eb6bc819f96a9c4418e[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 21:25:35 2024 +0800
+
+    一级分类-轮播图实现
+
+[33mcommit bc88cf9f2f7a0f355e99abf0f14194928983cfc3[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 20:44:12 2024 +0800
+
+    一级分类-面包屑导航渲染
+
+[33mcommit adcc656bfe0b03c40f9149fe1e0bf7a93561e394[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 20:02:45 2024 +0800
+
+    一级分类-路由配置
+
+[33mcommit 8706da3c9fe9b22d849044a4b24641d01ac3f3a2[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 19:40:32 2024 +0800
+
+    home-goodsItem组件封装
+
+[33mcommit c94b455c7b6718762a330b9465b1a02d763ed1a9[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 19:07:47 2024 +0800
+
+    home-product列表渲染
+
+[33mcommit a6fbe1a19bac6f266cfd11d74a04e9329152db47[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 17:18:44 2024 +0800
+
+    home-图片懒加载指令实现
+
+[33mcommit 94a75f0219811c9e295b45347003ef1450b81c3e[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 16:41:36 2024 +0800
+
+    home-人气推荐业务实现
+
+[33mcommit 371f8e905f5aaa1bdf546fa1f6ad79754fae162a[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 16:27:45 2024 +0800
+
+    home-新鲜好物业务实现
+
+[33mcommit 645c14fcf815b528e6ad4217fb48e2e6cd70e105[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 16:11:03 2024 +0800
+
+    home-面板组件封装
+
+[33mcommit 2480bafacd0004bb0932626459abb88b962ae4d3[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 15:12:22 2024 +0800
+
+    home-banner轮播图
+
+[33mcommit 099babf6fb1e2e92fc7daf09fdaa9126924ffe76[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 14:43:12 2024 +0800
+
+    home-整体结构拆分一级分类的数据渲染
+
+[33mcommit 2d1464831c2f81b959b6d0556155d07381238f2d[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 14:05:05 2024 +0800
+
+    pinia优化导航数据减少网络请求
+
+[33mcommit 4485337ab85613aaaa13fec5956e6b5e2f622330[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 10:37:12 2024 +0800
+
+    吸顶导航交互实现
+
+[33mcommit 93f5cee64be6a5268cee68fa2aefc03a139f12a2[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 10:18:34 2024 +0800
+
+    layout-渲染一级导航列表
+
+[33mcommit 38b723b36183c2bcfe89a4e112a096fb756b05f9[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Wed May 22 09:41:00 2024 +0800
+
+    引入图标字体
+
+[33mcommit fcc1495e1ac196ed1cdc2377803bccaa8e2e1447[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Tue May 21 21:58:26 2024 +0800
+
+    scss文件的自动导入
+
+[33mcommit 6ebd9c1ebc2b753426272b455f7a094585019900[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Tue May 21 16:12:14 2024 +0800
+
+    axios基础封装
+
+[33mcommit 6d94971d6be4b36f183c70af43c7e2969298c13a[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Tue May 21 15:51:08 2024 +0800
+
+    element主题色定制
+
+[33mcommit 09d100998d79370aae8c9b009b4cd70fef8c5c87[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Tue May 21 15:08:27 2024 +0800
+
+    elementPlus自动按需引入
+
+[33mcommit a174fd38716fe29feb45123e0a55d64b7ebeaf3c[m
+Author: yiw107 <1458286231@qq.com>
+Date:   Tue May 21 14:37:56 2024 +0800
+
+    初次提交创建好的环境

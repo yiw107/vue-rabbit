@@ -2,7 +2,7 @@
 import {defineStore} from 'pinia'
 import { computed, ref } from 'vue'
 import {useUserStore} from './user'
-import { insertCartAPI,findNewCartListAPI } from '@/apis/cart'
+import { insertCartAPI,findNewCartListAPI,delCartAPI } from '@/apis/cart'
 
 
 export const useCartStore = defineStore('cart',()=>{
@@ -36,13 +36,27 @@ export const useCartStore = defineStore('cart',()=>{
         
     }
     //删除购物车
-    const delCart =(skuId) =>{
-        //思路
+    const delCart =async(skuId) =>{
+        if(isLogin.value){
+            //调用接口实现接口购物车中的删除功能
+            await delCartAPI([skuId])
+            const res = await findNewCartListAPI()//获取最新的购物车列表
+            cartList.value=res.result//覆盖本地的购物车列表
+        }else{
+            //思路
         //1.找到要删除项的下标值-splice
         //2.使用数组的过滤方法-filter
         const idx = cartList.value.findIndex((item)=>skuId===item.skuId)
         cartList.value.splice('idx',1)
+        }
+        
     }
+
+    //获取最新的购物车列表action
+    // const updateNewList =async()=>{
+    //     const res = await findNewCartListAPI()//获取最新的购物车列表
+    //     cartList.value=res.result//覆盖本地的购物车列表
+    // }
     //单选功能
     const singleCheck =(skuId,selected)=>{
         //通过skuId找到要修改的那一项，然后把它的selected修改为传过来的selected

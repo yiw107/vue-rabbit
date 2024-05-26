@@ -19,3 +19,14 @@ export const findNewCartListAPI = ()=>{
 
     })
 }
+
+//删除
+export const delCartAPI= (ids)=>{
+    return httpInstance({
+        url:'/member/cart',
+        method:'DELETE',
+        data:{
+            ids
+        }
+    })
+}

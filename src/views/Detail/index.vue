@@ -1,22 +1,51 @@
 <script setup>
 import {getDetailAPI} from '@/apis/detail'
 import { onMounted, ref } from 'vue';
-
+import { useCartStore } from '@/stores/cartStore';
 import { useRoute } from 'vue-router';
 import DetailHot from './components/DetailHot.vue'
+import { ElMessage } from 'element-plus';
 const route = useRoute()
+const cartStore = useCartStore()
 const goods = ref({})
 const getGoods = async()=>{
   console.log('goods',goods)
    const res = await getDetailAPI(route.params.id)
-   
+   console.log('111',res)
    goods.value=res.result
 }
 onMounted(()=>getGoods())
 
+
+let skuObj ={}
 //sku规格被操作时
 const skuChange=(sku)=>{
-  console.log(sku)
+  skuObj=sku
+}
+
+//count修改
+const count = ref(1)
+const countChange=(count)=>{
+  console.log(count)
+}
+
+const addCart=()=>{
+  if(skuObj.skuId){
+    //规则已经选择，触发action
+    cartStore.addCart({
+      id:goods.value.id,
+      name:goods.value.name,
+      picture:goods.value.mainPictures[0],
+      price:goods.value.price,
+      count:count.value,
+      skuId:skuObj.skuId,
+      attrsText:skuObj.specsText,
+      selected:true
+    })
+  }else{
+    //规则没有选择 提示用户
+    ElMessage.warning('请选择规格')
+  }
 }
 </script>
 
@@ -30,11 +59,12 @@ const skuChange=(sku)=>{
           </el-breadcrumb-item>
           <el-breadcrumb-item :to="{ path: `/category/sub/${goods.categories[0].id}` }">{{goods.categories[0].name}}
           </el-breadcrumb-item>
-          <el-breadcrumb-item>抓绒保暖，毛毛虫子儿童运动鞋</el-breadcrumb-item>
+          <el-breadcrumb-item>{{goods.name}}</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
       <!-- 商品信息 -->
       <div class="info-container">
+        
         <div>
           <div class="goods-info">
             <div class="media">
@@ -90,10 +120,10 @@ const skuChange=(sku)=>{
               <!-- sku组件 -->
               <XtxSku :goods="goods" @change="skuChange"/>
               <!-- 数据组件 -->
-
+              <el-input-number v-model="count" @change="countChange" />
               <!-- 按钮组件 -->
               <div>
-                <el-button size="large" class="btn">
+                <el-button size="large" class="btn" @click="addCart">
                   加入购物车
                 </el-button>
               </div>

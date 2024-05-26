@@ -16,11 +16,12 @@ onMounted(()=>getNewList())
   <HomePanel title="新鲜好物" subTitle="新鲜出炉 品质靠谱">
     <ul class="goods-list">
       <li v-for="item in newList" :key="item.id">
-        <RouterLink :to="`Detail/${item.id}`">
-          <img v-img-lazy="item.picture"  alt="" />
-          <p class="name">{{ item.name }}</p>
-          <p class="price">&yen;{{ item.price }}</p>
+        <RouterLink :to="`/detail/${item.id}`">
+        <img v-img-lazy="item.picture" alt="" />
+        <p class="name">{{ item.name }}</p>
+        <p class="price">&yen;{{ item.price }}</p>
         </RouterLink>
+
       </li>
   </ul>
   </HomePanel>

@@ -46,6 +46,10 @@ export const useCartStore = defineStore('cart',()=>{
     //是否全选
     //比对每个框是否选中，computed返回是否都选中
     const isAll = computed(()=>cartList.value.every((item)=>item.selected))
+
+    //已选择数量
+    const selectedCount = computed(()=>cartList.value.filter(item=>item.selected).reduce((a,c)=>a+c.count,0))
+    const selectedPrice = computed(()=>cartList.value.filter(item=>item.selected).reduce((a,c)=>a+c.count*c.price,0))
     return {
         cartList,
         addCart,
@@ -54,7 +58,9 @@ export const useCartStore = defineStore('cart',()=>{
         allPrice,
         singleCheck,
         isAll,
-        allCheck
+        allCheck,
+        selectedCount,
+        selectedPrice
     }
 
 },

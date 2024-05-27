@@ -57,10 +57,10 @@ export const useCartStore = defineStore('cart',()=>{
         cartList.value=[]
     }
     //获取最新的购物车列表action
-    // const updateNewList =async()=>{
-    //     const res = await findNewCartListAPI()//获取最新的购物车列表
-    //     cartList.value=res.result//覆盖本地的购物车列表
-    // }
+    const updateNewList =async()=>{
+        const res = await findNewCartListAPI()//获取最新的购物车列表
+        cartList.value=res.result//覆盖本地的购物车列表
+    }
     //单选功能
     const singleCheck =(skuId,selected)=>{
         //通过skuId找到要修改的那一项，然后把它的selected修改为传过来的selected
@@ -95,7 +95,8 @@ export const useCartStore = defineStore('cart',()=>{
         allCheck,
         selectedCount,
         selectedPrice,
-        clearCart
+        clearCart,
+        updateNewList
     }
 
 },

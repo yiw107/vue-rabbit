@@ -4,6 +4,7 @@ import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
 import {useUserStore} from '@/stores/user'
 import {useRouter} from 'vue-router'
+// import router from '@/router'
 const httpInstance=axios.create({
     baseURL:'http://pcapi-xiaotuxian-front-devtest.itheima.net',
     timeout:5000
